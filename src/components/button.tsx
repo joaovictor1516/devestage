@@ -1,11 +1,15 @@
+"use client"
+
+import { ReactNode } from "react"
+
 interface ButtonProps{
-	text?: string;
+	children: ReactNode
 }
 
 export function Button(props: ButtonProps){
 	return (
-		<button className="bg-blue text-gray-100 px-2">
-			{props.text || "Enviar"}
+		<button className="flex justify-between items-center bg-gray-500 border-blue text-blue w-full h-12 px-5 font-semibold rounded-xl cursor-pointer transition duration-300 hover:bg-blue hover:text-gray-900">
+			{props.children}
 		</button>
 	)
 }
