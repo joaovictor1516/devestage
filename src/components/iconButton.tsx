@@ -1,6 +1,6 @@
 "use client"
 
-import { ComponentProps } from "react";
+import type { ComponentProps } from "react";
 
 interface IconButtonProps extends ComponentProps<"button">{}
 

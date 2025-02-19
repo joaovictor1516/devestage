@@ -1,6 +1,6 @@
 "use client"
 
-import { ComponentProps } from "react"
+import type { ComponentProps } from "react"
 
 interface ButtonProps extends ComponentProps<"button">{} //Como a tag button recebe valores dentro dela não é necessario a utilização do ReactNode.
 
