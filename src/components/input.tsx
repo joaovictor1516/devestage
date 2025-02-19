@@ -18,7 +18,7 @@ export function InputRoot({ error = false, ...props }: InputRootProps) {
 
 interface InputIconsProps extends ComponentProps<"span"> {}
 
-export function InputIcons(props: InputIconsProps) {
+export function InputIcon(props: InputIconsProps) {
 	return (
 		<span
 			className="text-gray-400 group-focus-within:text-gray-100 group-[&:not(:has(input:placeholder-shown))]:text-gray-100 group-data-[error=true]:text-danger"
@@ -29,6 +29,6 @@ export function InputIcons(props: InputIconsProps) {
 
 interface InputFieldsProps extends ComponentProps<"input"> {}
 
-export function InputFields(props: InputFieldsProps) {
+export function InputField(props: InputFieldsProps) {
 	return <input className="flex-1 outline-0" {...props} />;
 }
