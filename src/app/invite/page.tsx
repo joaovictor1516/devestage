@@ -1,6 +1,3 @@
-import { IconButton } from "@/components/iconButton";
-import { InputField, InputIcon, InputRoot } from "@/components/input";
-import { Copy, Link } from "lucide-react";
 import Image from "next/image";
 import logo from "../../assets/logo.svg";
 import { Ranking } from "./components/ranking";
