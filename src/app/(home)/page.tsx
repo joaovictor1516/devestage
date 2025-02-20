@@ -1,6 +1,6 @@
 import { Radio } from "lucide-react";
 import Image from "next/image";
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 import { SubscriptionForm } from "./subscriptionForm";
 
 export default function Home() {
