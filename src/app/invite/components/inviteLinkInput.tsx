@@ -2,7 +2,7 @@ import { IconButton } from "@/components/iconButton";
 import { InputField, InputIcon, InputRoot } from "@/components/input";
 import { Copy, Link } from "lucide-react";
 
-export function InviteLink() {
+export function InviteLinkInput() {
 	return (
 		<InputRoot>
 			<InputIcon>
