@@ -1,7 +1,7 @@
 import Image from "next/image";
-import medal_1 from "../../../assets/medal-gold.svg";
-import medal_2 from "../../../assets/medal-silver.svg";
-import medal_3 from "../../../assets/medal-cooper.svg";
+import medal_1 from "../../../../assets/medal-gold.svg";
+import medal_2 from "../../../../assets/medal-silver.svg";
+import medal_3 from "../../../../assets/medal-cooper.svg";
 
 export function Ranking(){
     return (
