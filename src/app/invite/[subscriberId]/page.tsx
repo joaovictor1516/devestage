@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../assets/logo.svg";
+import logo from "../../../assets/logo.svg";
 import { Ranking } from "./components/ranking";
 import { Stats } from "./components/stats";
 import { InviteLinkInput } from "./components/inviteLinkInput";
