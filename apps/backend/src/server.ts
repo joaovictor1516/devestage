@@ -1,13 +1,14 @@
-import { fastify } from "fastify";
 import { fastifyCors } from "@fastify/cors";
 import { fastifySwagger } from "@fastify/swagger";
 import { fastifySwaggerUi } from "@fastify/swagger-ui";
+import { fastify } from "fastify";
 import {
-	validatorCompiler,
-	serializerCompiler,
-	jsonSchemaTransform,
 	type ZodTypeProvider,
+	jsonSchemaTransform,
+	serializerCompiler,
+	validatorCompiler,
 } from "fastify-type-provider-zod";
+import { env } from "./env";
 import { subscribeToEventRoute } from "./routs/subscribeToEventRoute";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
@@ -30,11 +31,11 @@ app.register(fastifySwagger, {
 });
 
 app.register(fastifySwaggerUi, {
-    routePrefix: "/docs"
+	routePrefix: "/docs",
 });
 
 app.register(subscribeToEventRoute);
 
-app.listen({ port: 3333 }).then(() => {
+app.listen({ port: env.PORT }).then(() => {
 	console.log("HTTP server running.");
 });
