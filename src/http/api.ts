@@ -57,7 +57,7 @@ export type GetSubscriberRankingPosition200 = {
 export const getSubscribeToEventUrl = () => {
 
 
-  return `http://localhost:3333/subscriptions`
+  return "http://localhost:3333/subscriptions"
 }
 
 export const subscribeToEvent = async (subscribeToEventBody: SubscribeToEventBody, options?: RequestInit): Promise<SubscribeToEvent201> => {
@@ -114,7 +114,7 @@ export const accessInviteLink = async (subscriberId: string, options?: RequestIn
 export const getGetRankingUrl = () => {
 
 
-  return `http://localhost:3333/ranking`
+  return "http://localhost:3333/ranking"
 }
 
 export const getRanking = async ( options?: RequestInit): Promise<GetRanking200> => {
