@@ -14,7 +14,9 @@ export async function Stats(props: StatsProps) {
 		props.subcriberId,
 	);
 
-	const { position: rankingPosition } = await getSubscriberRankingPosition(props.subcriberId);
+	const { position: rankingPosition } = await getSubscriberRankingPosition(
+		props.subcriberId,
+	);
 
 	const { count: inviteCount } = await getSubscriberInviteCount(
 		props.subcriberId,
