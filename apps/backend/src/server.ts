@@ -9,7 +9,8 @@ import {
 	validatorCompiler,
 } from "fastify-type-provider-zod";
 import { env } from "./env";
-import { AccessInviteLinkRout } from "./routes/accessInviteLinkRoute";
+import { accessInviteLinkRoute } from "./routes/accessInviteLinkRoute";
+import { getSubscriberInviteClicksRoute } from "./routes/getSubscriberInviteClicksRoute";
 import { subscribeToEventRoute } from "./routes/subscribeToEventRoute";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
@@ -36,7 +37,8 @@ app.register(fastifySwaggerUi, {
 });
 
 app.register(subscribeToEventRoute);
-app.register(AccessInviteLinkRout)
+app.register(accessInviteLinkRoute);
+app.register(getSubscriberInviteClicksRoute);
 
 app.listen({ port: env.PORT }).then(() => {
 	console.log("HTTP server running.");
