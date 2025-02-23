@@ -1,6 +1,7 @@
 import type { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
 import { z } from "zod";
 import { env } from "../env";
+import { accessInviteLinkFunction } from "../functions/accessInviteLink";
 
 export const AccessInviteLinkRout: FastifyPluginAsyncZod = async (app) => {
 	app.get(
@@ -19,9 +20,11 @@ export const AccessInviteLinkRout: FastifyPluginAsyncZod = async (app) => {
 		async (request, reply) => {
 			const { subscriberId } = request.params;
 
+			await accessInviteLinkFunction({ subscriberId });
+
 			const redirectUrl = new URL(env.WEB_URL);
 
-			redirectUrl.searchParams.set('referrer', subscriberId);
+			redirectUrl.searchParams.set("referrer", subscriberId);
 
 			//301: redirecionamento permanente (usa o cache do browser)
 			//302: redirecionamento temporário (não usa o cache do browser)

@@ -9,7 +9,7 @@ import {
 	validatorCompiler,
 } from "fastify-type-provider-zod";
 import { env } from "./env";
-import { AccessInviteLinkRout } from "./routes/accessInviteLink";
+import { AccessInviteLinkRout } from "./routes/accessInviteLinkRoute";
 import { subscribeToEventRoute } from "./routes/subscribeToEventRoute";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
