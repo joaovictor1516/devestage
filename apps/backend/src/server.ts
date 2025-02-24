@@ -14,6 +14,7 @@ import { getSubscriberInviteClicksRoute } from "./routes/getSubscriberInviteClic
 import { getSubscriberInviteRankPositionRoute } from "./routes/getSubscriberInviteRankPositionRoute";
 import { getSubscriberInvitesCountRoute } from "./routes/getSubscriberInvitesCountRoute";
 import { subscribeToEventRoute } from "./routes/subscribeToEventRoute";
+import { getRankRoute } from "./routes/getRankRoute";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -38,6 +39,7 @@ app.register(fastifySwaggerUi, {
 	routePrefix: "/docs",
 });
 
+app.register(getRankRoute);
 app.register(subscribeToEventRoute);
 app.register(accessInviteLinkRoute);
 app.register(getSubscriberInviteClicksRoute);
