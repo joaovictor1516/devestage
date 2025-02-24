@@ -12,6 +12,7 @@ import { env } from "./env";
 import { accessInviteLinkRoute } from "./routes/accessInviteLinkRoute";
 import { getSubscriberInviteClicksRoute } from "./routes/getSubscriberInviteClicksRoute";
 import { subscribeToEventRoute } from "./routes/subscribeToEventRoute";
+import { getSubscriberInvitesCountRoute } from "./routes/getSubscriberInvitesCountRoute";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -39,6 +40,7 @@ app.register(fastifySwaggerUi, {
 app.register(subscribeToEventRoute);
 app.register(accessInviteLinkRoute);
 app.register(getSubscriberInviteClicksRoute);
+app.register(getSubscriberInvitesCountRoute);
 
 app.listen({ port: env.PORT }).then(() => {
 	console.log("HTTP server running.");
