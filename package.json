@@ -13,9 +13,9 @@
   "license": "ISC",
   "author": "joaovictor1516",
   "scripts": {
-    "dev": "run-p apps:*",
-    "frontend": "cd apps/frontend && npm run dev",
-    "backend": "cd apps/backend && npm run dev"
+    "dev": "run-p frontend backend",
+    "frontend": "npm run dev --prefix apps/frontend",
+    "backend": "npm run dev --prefix apps/backend"
   },
   "dependencies": {
     "npm-run-all": "^4.1.5"
